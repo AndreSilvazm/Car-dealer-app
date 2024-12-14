@@ -15,7 +15,7 @@ interface ResultProps {
 
 export default async function Result({ params }: ResultProps) {
   
-  const { makeId, year } = await params;
+  const { makeId, year } =  params;
 
   let modelsData: VehicleModel[];
   try {
