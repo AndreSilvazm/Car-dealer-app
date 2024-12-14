@@ -4,6 +4,8 @@ Found a Car is a web application that allows users to search for brand-new vehic
 
 Take a look: 
 
+<img src='https://i.ibb.co/nMBqsgJ/SiteImg.png'>
+
 ## 🛠 Technologies Used
 
 * Next.js: Framework for server-side rendering (SSR) and building React applications.
