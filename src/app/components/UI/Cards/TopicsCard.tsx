@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 
 interface TopicsCardProps {
   car: {
-    imgUrl: StaticImageData; // Tipagem para a imagem
+    imgUrl: StaticImageData; 
     Title: string;
   };
 }
