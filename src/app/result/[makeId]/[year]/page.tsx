@@ -7,15 +7,15 @@ import getModels from "@/app/data/services/GetModels";
 import VehicleCard from "@/app/components/UI/Cards/VehicleCard";
 
 interface ResultProps {
-  params: {
+  params: Promise<{
     makeId: string;
     year: string;
-  };
+  }>;
 }
 
-export default async function Result({ params }: ResultProps) {
+export default async function Result({ params }:ResultProps) {
   
-  const { makeId, year } =  params;
+  const { makeId, year } =  await params;
 
   let modelsData: VehicleModel[];
   try {
