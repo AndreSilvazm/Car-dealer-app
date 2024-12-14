@@ -1,5 +1,4 @@
 import { MakeDto } from "@/app/data/utils/MakesForVehicleDto";
-import { RiArrowDropDownLine } from "react-icons/ri";
 
 interface FilterOptProps {
   data?: MakeDto[]; 
