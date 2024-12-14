@@ -20,6 +20,8 @@ function NextBtn({ isDisabled, isLoading }: NextBtnProps) {
           src={CarWheel.src}
           alt="Loading"
           className="w-6 h-6 animate-spin" 
+          width={10}
+          height={10}
         />
       ) : (
         "Next"
