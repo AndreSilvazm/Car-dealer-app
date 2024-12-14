@@ -1,4 +1,5 @@
 import CarWheel from "@/app/Midias/carWheel.png";
+import Image from "next/image";
 
 interface NextBtnProps {
   isDisabled: boolean; 
@@ -15,7 +16,7 @@ function NextBtn({ isDisabled, isLoading }: NextBtnProps) {
         ${isDisabled ? "bg-opacity-60 cursor-not-allowed" : "cursor-pointer"}`}
     >
       {isLoading ? ( 
-        <img
+        <Image
           src={CarWheel.src}
           alt="Loading"
           className="w-6 h-6 animate-spin" 
