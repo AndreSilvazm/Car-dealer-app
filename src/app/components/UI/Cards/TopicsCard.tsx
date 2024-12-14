@@ -14,6 +14,8 @@ function TopicsCard({ car }: TopicsCardProps) {
       <Image
         src={car.imgUrl.src}
         alt={car.Title}
+        width={car.imgUrl.width}
+        height={car.imgUrl.height}
         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
       />
 
