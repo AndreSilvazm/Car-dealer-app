@@ -1,8 +1,17 @@
-function TopicsCard({ car }: { car: any }) {
+import Image, { StaticImageData } from "next/image";
+
+interface TopicsCardProps {
+  car: {
+    imgUrl: StaticImageData; // Tipagem para a imagem
+    Title: string;
+  };
+}
+
+function TopicsCard({ car }: TopicsCardProps) {
   return (
     <div className="relative group cursor-pointer rounded-lg overflow-hidden shadow-2xl">
       {/* Image */}
-      <img
+      <Image
         src={car.imgUrl.src}
         alt={car.Title}
         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
