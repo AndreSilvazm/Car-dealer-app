@@ -14,15 +14,16 @@ interface ResultProps {
 }
 
 export default async function Result({ params }: ResultProps) {
-  
-  const { makeId, year } = await params;
+  const { makeId, year } = params;
 
-  let modelsData: VehicleModel[];
+  let modelsData: VehicleModel[] = [];
+
+  {/*Fetching the datas of Models. */}
   try {
     modelsData = await getModels(makeId, year);
   } catch (error) {
     console.error("Error fetching vehicle models:", error);
-    return notFound();
+    return notFound();  
   }
 
   return (
@@ -30,7 +31,6 @@ export default async function Result({ params }: ResultProps) {
       <Header />
 
       <main className="min-h-[80vh] md:min-h-screen bg-[#edeef2] p-6">
-
         <h1 className="text-3xl md:text-4xl font-bold text-center text-Primary mb-8">
           Available Models - {year}
         </h1>
